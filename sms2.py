@@ -1,5 +1,6 @@
 import urllib,requests
-import time,sys
+import time,os
+os.system('pip3 install request')
 print('''\033[1;33m ____  __  __ ____
 / ___||  \/  / ___|  _ __  _   _
 \___ \| |\/| \___ \ | '_ \| | | |
