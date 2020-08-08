@@ -28,7 +28,7 @@ while True:
       os.system('pip3 install requests')
       print('%s Requests has been installed.')
       os.system('clear')
-    import requests
+      import requests
     r=requests.post(url,json=body)
     print ("\033[1;32m[ ..Successfully sent.. ]")
     c=input("\033[1;90mDo you want send message again? -")
