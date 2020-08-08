@@ -5,7 +5,7 @@ simple sms tool
 
 > open termux apk
 
-> paste here-
+> paste here-git clone https://github.com/BlasterKing/Anuu
 
 > Then Type-cd Anuu
 
