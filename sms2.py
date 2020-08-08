@@ -10,6 +10,12 @@ print('''\033[1;33m ____  __  __ ____
 print("\033[1;31m<<<_____________________________>>>\n")
 while True:
     num=int(input("\033[1;36mNumber:"))
+    if str(num)[0:2] not in ("77","76","71","78","070"):
+        print("Wrong number!")
+        continue 
+    if len(str(num)) !=9:
+        print(len(str(num)))
+        continue 
     msg=input("Message:")
     url="https://sv2.ideamarthosting.dialog.lk/lakpriya1016Apps/wapp/otp2.php"
     body={"id":num,"apphash":msg}
@@ -24,7 +30,7 @@ while True:
       os.system('clear')
     import requests
     r=requests.post(url,json=body)
-    ("\033[1;32m[ ..Successfully sent.. ]")
+    print ("\033[1;32m[ ..Successfully sent.. ]")
     c=input("\033[1;90mDo you want send message again? -")
     if c.lower()=="y":
         continue 
