@@ -1,6 +1,5 @@
-import urllib,requests
+import urllib
 import time,os
-os.system('pip3 install request')
 print('''\033[1;33m ____  __  __ ____
 / ___||  \/  / ___|  _ __  _   _
 \___ \| |\/| \___ \ | '_ \| | | |
@@ -16,8 +15,16 @@ while True:
     body={"id":num,"apphash":msg}
 
     print("\033[1;31m<------waiting------>")
+    try:
+      import requests
+    except ImportError:
+      print('%s Requests isn\'t installed, installing now.')
+      os.system('pip3 install requests')
+      print('%s Requests has been installed.')
+      os.system('clear')
+    import requests
     r=requests.post(url,json=body)
-    print("\033[1;32m[ ..Successfully sent.. ]")
+    ("\033[1;32m[ ..Successfully sent.. ]")
     c=input("\033[1;90mDo you want send message again? -")
     if c.lower()=="y":
         continue 
